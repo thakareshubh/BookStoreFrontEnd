@@ -1,0 +1,81 @@
+.main{ 
+    
+    padding: 30px;
+    margin-top: 120px;
+    margin-left: -80px;
+   
+}
+.mainContainer{
+ 
+  border: 2px solid rgb(228, 220, 220);
+  border-radius: 7px;
+  padding: 20px;
+  padding-bottom: 10%;
+}
+mat-form-field.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  img{
+    margin-left: 30px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    height: 240px;
+    width: 240px;
+    border-radius: 130px;
+
+}
+.example-card{
+    margin-top: 40px;
+    width: 600px;
+    height: 350px;
+    border:2px solid seashell;
+    border-radius: 20px;
+}
+.example-card2{
+    width: 350px;
+    height: 420px;
+    margin-left: -300px;
+    border:2px solid seashell;
+    border-radius: 5px ;
+    
+}
+.button{
+    font-size: 25px;
+    border: none;
+    margin-top: 15px;
+    background: none;
+}
+input{
+    width: 260px;height: 30px;margin-top: -30px;
+    border-radius: 3px;
+}
+
+p{
+    margin-top: -10px;
+   
+}
+.pass{
+    margin-bottom: -20px;
+}
+.bott{
+    width: 270px;height: 40px;margin-top: 29px; color: white;border-radius: 3px;
+    font-size: 20px; background-color: rgb(145, 24, 24);margin-left: 45px;
+}
+.bottomButt{
+    display: flex;
+    direction: row;
+    height: 30px;
+    margin-left: 47px;
+   
+}
+@media screen and (max-width: 600px){
+    .example-card2{
+        width: 350px;
+        height: 420px;
+        margin-left: 10px;
+        border:2px solid seashell;
+        border-radius: 5px ;
+        
+    }
+}

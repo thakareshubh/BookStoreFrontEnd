@@ -1,0 +1,75 @@
+<div style="background-color: rgb(209, 203, 203);height: 100%;">
+    <div fxLayout="column" fxLayoutAlign="start center" class="main" fxFlex>
+
+        <div class="container1" fxLayout="row" fxFlex>
+            <div fxHide.xs>
+                <mat-card class="example-card">
+                    <img src="./../.././assets/component.png" alt="">
+                    <span style="margin-left: -200px;font-size: 20px;font-weight:500;">Online Book Shoping</span>
+                </mat-card>
+
+            </div>
+
+            
+
+                <mat-card class="example-card2" >
+
+                    <div fxLayout="row">
+                        <button class="button" style="margin-left: 40px;" routerLink="/login">
+                            LOGIN
+                        </button>
+                        <button class="button" style="margin-left: 75px;font-weight: bolder;">SINGUP</button>
+                    </div><br>
+                    <div style="padding-left: 45px; margin-top: 10px;">
+                        <span>Full Name</span>
+                        <p style="margin-top: 10px;">
+                            
+                                <input [(ngModel)]="fullName" >
+                          
+                        </p>
+                    </div>
+                    <div style="padding-left: 45px; margin-top: 15px;">
+                        <span>Email Id</span>
+                        <p style="margin-top: 10px;">
+                            
+                               
+                                <input [(ngModel)]="email" >
+
+
+                           
+                        </p>
+                    </div>
+                    <div style="padding-left: 45px; margin-top: 15px;">
+                        <span>Password</span>
+                        <p style="margin-top: 10px;">
+                           
+                               
+                                <input [(ngModel)]="password" >
+
+                           
+                        </p>
+
+                    </div>
+                    <div style="padding-left: 45px; margin-top: 15px;">
+                        <span>Moblie Number</span>
+                        <p style="margin-top: 10px;">
+                           
+                               
+                                <input  [(ngModel)]="mobile" >
+
+
+                          
+                        </p>
+                    </div>
+                    <div style=" margin-top: -20px;">
+                        <button class="bott" (click)="onSubmit()" >SingUp</button>
+                    </div>
+
+
+
+                </mat-card>
+            
+        </div>
+
+    </div>
+</div>

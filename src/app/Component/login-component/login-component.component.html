@@ -1,0 +1,54 @@
+<div style="background-color: gray;height: 100%;">
+    <div fxLayout="column" fxLayoutAlign="start center" class="main" fxFlex>
+
+        <div class="container1" fxLayout="row">
+            <div fxHide.xs>
+                <mat-card class="example-card">
+                    <img src="./../.././assets/component.png" alt="">
+                    <span style="margin-left: -200px;font-size: 20px;font-weight:500;">Online Book Shoping</span>
+                </mat-card>
+
+            </div>
+
+            
+
+                <mat-card class="example-card2">
+
+                    <div fxLayout="row">
+                        <button class="button" style="margin-left: 40px;font-weight: bolder;">
+                            LOGIN
+                        </button>
+                        <button class="button" style="margin-left: 72px" routerLink="/singUp">SINGUP</button>
+                    </div><br>
+                    <div style="padding-left: 45px; margin-top: 10px;">
+                        <span style="margin-bottom: 20px;">Email Id</span>
+                        <p style="margin-top: 20px;">   
+                                <input [(ngModel)]="email" matInput>
+                        </p>
+                    </div>
+                    <div style="padding-left: 45px; margin-top: 10px;">
+                        <span>Password</span>
+                  
+                            <input style="margin-top: 10px;" [(ngModel)]="password" matInput >
+                           
+                        <span style="margin-left: 150px;" routerLink="/forget">Forgot Password</span>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <button class="bott" (click)=" onSubmit()">Login</button>
+                    </div>
+                    <span style="margin-left:130px;">----------OR-----------</span><br><br>
+                    <div class="bottomButt">
+                        <button
+                            style="background-color: rgb(61, 61, 230);width:110px;color: white;font-size: 15px;height: 35px;border-radius: 3px;">Facebook</button>
+                        <button
+                            style="background-color: rgb(230, 225, 225);width:110px;margin-left: 40px;font-size: 15px;height: 35px;border-radius: 3px;">Google</button>
+                    </div>
+
+
+                </mat-card>
+
+
+            
+        </div>
+    </div>
+</div>
