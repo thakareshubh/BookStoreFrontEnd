@@ -1,4 +1,4 @@
-<div style="width: 100%; padding-left: 100px;padding-right:210px; " fxLayout="column">
+<div style="width: 100%; padding-left: 100px;padding-right:210px;margin-bottom: 30px; " fxLayout="column">
     <div fxLayout="row" fxLayoutAlign="space-between center">
         <div>
             <span class="books">Books <p id="book-count">({{booksArray?.length}} items)</p></span>
@@ -14,19 +14,19 @@
             </mat-form-field>
         </div>
     </div>
-    <div fxLayout="row" fxLayoutGap="22px" fxLayout="row wrap" fxFlex>
+    <div fxLayout="row"  fxLayoutGap="27px" fxLayout="row wrap" fxFlex >
         <div *ngFor="let Book of booksArray" style="margin-bottom: 30px;width: 270px;" fxLayout="row"
-            fxLayout="row wrap">
-            <mat-card style="margin-bottom: 40px;">
+            fxLayout="row wrap"  >
+            <mat-card style="margin-bottom: 40px;" >
                 <div class="maindiv">
                     <div class="bookimg" fxLayout="row " fxLayoutAlign="center center">
-                        <img class="img1" [src]="Book.bookImage" alt="book img">
+                        <img class="img1" [src]="Book.bookImage" alt="book img" (click)="quickview(Book)">
                     </div>
                     <div >
                         <h2 class="title">{{Book.bookName}}</h2>
                         <p id="para">by {{Book.authorName}}</p>
                         <div class="rating" fxLayoutAlign="space-between center">
-                            ({{Book.rating}})<img class="Star" src="" alt="">
+                            ({{Book.rating}})<img class="Star" src="./../../../assets/430117_star_icon.png" alt="">
                             <p id="count">({{Book.ratingCount}})</p>
                         </div>
 

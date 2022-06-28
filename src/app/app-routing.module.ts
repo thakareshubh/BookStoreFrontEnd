@@ -8,6 +8,8 @@ import { LoginComponentComponent } from './Component/login-component/login-compo
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
 
 import { SingUpComponentComponent } from './Component/sing-up-component/sing-up-component.component';
+import { QuickViewComponent } from './Component/quick-view/quick-view.component';
+
 
 const routes: Routes = [
 
@@ -17,7 +19,10 @@ const routes: Routes = [
   {path:'resetPassword/:token',component:ResetPasswordComponent},
   {path:'dashbord',component:DashBordComponent,
     children:
-            [{path:'getAllBook',component:GetAllBookComponent}]
+            [{path:'getAllBook',component:GetAllBookComponent},
+            {path:'quickView',component:QuickViewComponent},
+              ]
+
           
           },
  

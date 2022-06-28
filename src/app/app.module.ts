@@ -23,6 +23,11 @@ import { ForgetPasswordComponentComponent } from './Component/forget-password-co
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
 import { DashBordComponent } from './Component/dash-bord/dash-bord.component';
 import { GetAllBookComponent } from './Component/get-all-book/get-all-book.component';
+import { QuickViewComponent } from './Component/quick-view/quick-view.component';
+
+
+
+
 
 
 @NgModule({
@@ -34,6 +39,8 @@ import { GetAllBookComponent } from './Component/get-all-book/get-all-book.compo
     ResetPasswordComponent,
     DashBordComponent,
     GetAllBookComponent,
+    QuickViewComponent,
+  
     
     
     

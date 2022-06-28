@@ -1,0 +1,109 @@
+<div style="width: 100%; padding-left: 100px;padding-right:210px;margin-bottom: 200px; " fxLayout="column">
+    <div fxLayout="column">
+
+        <div>
+            <span style="color:gray; cursor: pointer;" routerLink="/dashboard/getallbook">Home/</span><span> Books()
+            </span>
+        </div>
+        <div style="margin-top: 50px;" fxLayout="row ">
+            <div fxLayout="row " fxLayoutAlign="center start">
+                <div class="bookimg2" fxLayout="row " fxLayoutAlign="center center">
+                    <img class="img2" src="./../../../assets/Book1.png" alt="book img">
+                </div>
+                <div>
+                    <div class="bookimg1" fxLayout="row " fxLayoutAlign="center center">
+                        <img class="img1" src="./../.././../assets/Book1.png" alt="book img">
+
+                    </div>
+                    <div fxLayout="row " fxLayoutAlign="space-between" style="margin-top: 30px;">
+                        <button class="butt" fxLayout="row " fxLayoutAlign="center center">ADD TO BAG</button>
+                        <button class="butt1" fxLayout="row " fxLayoutAlign="center center">
+                            <mat-icon id="fav-icons">favorite</mat-icon>
+                            WHISH LIST
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 40px; ">
+                <div fxLayout="column">
+                    <div fxLayout="column">
+                        <div>
+                            <h2 class="title">bookName</h2>
+                        </div>
+                        <div>
+                            <p id="para">by author name</p>
+                        </div>
+
+                        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign=" center">
+                            <div class="rating" fxLayout="row" fxLayoutAlign="center center">rating<img class="Star"
+                                    src="./../../../assets/430117_star_icon.png" alt=""></div>
+                            <div>
+                                <p id="count">ratingcount</p>
+                            </div>
+
+                        </div>
+
+                        <div class="price-container" fxLayout="row" fxLayoutGap="20px">
+
+                            <div class="dicounted-price">
+                                Rs.discount price
+                            </div>
+                            <div class="actual-price">
+                                Rs.actual price
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr style=" width: 100%; margin-top: 30px;">
+                    <div style="margin-top: 30px;">
+                        <li style="font-size: 18px;font-weight: bold;">Book Detail</li>
+                        <ul style="margin-left: -15px; word-spacing:5px">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, magni esse. Quae ipsum earum error doloribus veniam modi nulla, nisi
+                            deserunt, ipsam saepe minus culpa molestias. Sequi unde quibusdam quas, illo numquam cum
+                            consectetur vero rerum provident expedita earum est culpa velit facilis ea quod minima
+                            adipisci animi officiis maxime suscipit iusto officia eaque. Dignissimos enim ratione optio
+                            vel neque aliquid, voluptatem quibusdam est modi iste expedita impedit, possimus ab debitis
+                            id quisquam ad voluptates vero pariatur mollitia? Sed facilis quaerat voluptate quidem sint
+                            explicabo aut doloribus, fuga odio officia, iure doloremque voluptatibus culpa ducimus error
+                            soluta ipsam dolorem in libero odit. Libero, pariatur optio in autem esse est voluptatum
+                            corrupti tempore et, quis itaque voluptatibus beatae, perspiciatis atque eos officia nulla.
+                            Officiis quos eligendi officia quisquam dicta accusantium nobis dolore at, inventore, nisi,
+                            quidem quod quo magnam vitae consequuntur aspernatur repellat? Quos labore adipisci qui
+                            corporis molestias temporibus a.</ul>
+                    </div>
+                    <hr style=" width: 100%; margin-top: 30px;">
+                    <div style="margin-top: 30px;">
+                        <span style="font-size: 20px;">Customer Feedback</span>
+                        <mat-card
+                            style="padding:20px;margin-top: 20px; background-color:rgb(242, 242, 255);height: 150px;border-radius: 5px;">
+                            <span>Overall rating</span>
+                            <div>
+                                <div class="rate">
+
+                                    <input type="radio" id="star5" name="rate"  value="5" />
+                                    <label for="star5" title="Extremely Good">5 stars</label>
+                                    <input type="radio" id="star4" name="rate"  value="4" />
+                                    <label for="star4" title="Very Good">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="Good">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="Not Bad">2 stars</label>
+                                    <input type="radio" id="star1" name="rate"  value="1" />
+                                    <label for="star1" title="Bad">1 star</label>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <input style="width:100%;height:40px;border-radius: 5px;" placeholder="Enter your review">
+                            </div>
+                           
+                            <div fxLayoutAlign="end center">
+                                <button
+                                    style="width:80px;border-radius: 5px;height: 30px;background-color: rgb(105, 105, 201);">Submit</button>
+                            </div>
+                        </mat-card>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

@@ -26,7 +26,10 @@ export class GetAllBookComponent implements OnInit {
       console.log(this.booksArray);
     });
   }
-
+  quickview(Book:any){  
+    localStorage.setItem('bookId', Book.bookId); 
+    this.router.navigateByUrl('dashbord/quickView')
+  }
   lowtohigh(){
     this.booksArray= this.booksArray.sort((low:any,high:any)=> low.discountPrice-high.discountPrice);
     }
