@@ -1,0 +1,48 @@
+<div style="width: 100%; padding-left: 100px;padding-right:210px; " fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <span class="books">Books <p id="book-count">({{booksArray?.length}} items)</p></span>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Sort by relevance</mat-label>
+                <mat-select class="matselect">
+                    <mat-option (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+                    <mat-option (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+                    <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="22px" fxLayout="row wrap" fxFlex>
+        <div *ngFor="let Book of booksArray" style="margin-bottom: 30px;width: 270px;" fxLayout="row"
+            fxLayout="row wrap">
+            <mat-card style="margin-bottom: 40px;">
+                <div class="maindiv">
+                    <div class="bookimg" fxLayout="row " fxLayoutAlign="center center">
+                        <img class="img1" [src]="Book.bookImage" alt="book img">
+                    </div>
+                    <div >
+                        <h2 class="title">{{Book.bookName}}</h2>
+                        <p id="para">by {{Book.authorName}}</p>
+                        <div class="rating" fxLayoutAlign="space-between center">
+                            ({{Book.rating}})<img class="Star" src="" alt="">
+                            <p id="count">({{Book.ratingCount}})</p>
+                        </div>
+
+                        <div class="price-container" fxLayout="row">
+
+                            <div class="dicounted-price">
+                                Rs.{{Book.discountPrice}}
+                            </div>
+                            <div class="actual-price">
+                                Rs.{{Book.actualPrice}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

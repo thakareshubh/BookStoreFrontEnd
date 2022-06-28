@@ -1,0 +1,46 @@
+<div fxLayout="column" fxFlex style="height: 100%;width: 100%;">
+    <div fxFlex style="width: 100%;" class="toolbar" fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
+
+        <div class="navContainer" fxLayout="row" style="padding-left: 100px;width: 300px;" fxFlex>
+            <img src="./../../../assets/navBook.png" alt="">
+            <span style="color: White;font-size:large; margin-left: 5px;" routerLink="./getAllBook">BookStore</span>
+        </div>
+
+
+        <div style="margin-bottom: 10px;margin-top: 10px;margin-right: 300px;">
+            <div style="background-color:aliceblue;height: 40px;width: 600px;padding-left: -300px;" fxLayout="row">
+                <mat-icon class="maticon">search </mat-icon>
+
+                <input class="in" placeholder="Search">
+
+            </div>
+        </div>
+
+        <div style="padding-right:200px;background-color: #A03037; " fxLayout="row">
+            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
+                aria-label="Example icon-button with heart icon">
+                <div style="margin-left: 5px;height: 12px;">
+                    <mat-icon class="icon">perm_identity</mat-icon>
+                </div>
+                <span style="color: aliceblue;">Profile</span>
+            </button>
+            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
+                aria-label="Example icon-button with share icon">
+
+                <div style="margin-left: 5px;height: 12px;">
+                    <mat-icon class="icon">shopping_cart</mat-icon>
+                </div>
+                <span style="color: aliceblue;padding-left: 3px;">Cart</span>
+            </button>
+        </div>
+
+    </div>
+    <div style="margin-top: 30px;" fxFlex>
+        <router-outlet fxFlex></router-outlet>
+    </div>
+
+    <footer class="footer">
+        Copyright &copy; 2022 Bookstore Private Limited All Rights Reserved
+    </footer>
+
+</div>

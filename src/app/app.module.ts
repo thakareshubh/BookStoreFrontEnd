@@ -9,11 +9,21 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select'
+import {MatMenuModule} from '@angular/material/menu'
+
+
 
 import { LoginComponentComponent } from './Component/login-component/login-component.component';
 import { SingUpComponentComponent } from './Component/sing-up-component/sing-up-component.component';
 import { ForgetPasswordComponentComponent } from './Component/forget-password-component/forget-password-component.component';
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
+import { DashBordComponent } from './Component/dash-bord/dash-bord.component';
+import { GetAllBookComponent } from './Component/get-all-book/get-all-book.component';
+
 
 @NgModule({
   declarations: [
@@ -22,15 +32,18 @@ import { ResetPasswordComponent } from './Component/reset-password/reset-passwor
     SingUpComponentComponent,
     ForgetPasswordComponentComponent,
     ResetPasswordComponent,
+    DashBordComponent,
+    GetAllBookComponent,
+    
     
     
   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,MatIconModule,MatSelectModule,MatMenuModule,
     BrowserAnimationsModule,FlexLayoutModule ,FormsModule, ReactiveFormsModule ,MatFormFieldModule,
-    MatCardModule,HttpClientModule,
+    MatCardModule,HttpClientModule,MatToolbarModule,MatRadioModule,MatInputModule,
     
   ],
   providers: [],

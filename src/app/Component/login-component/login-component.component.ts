@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserServiceService } from 'src/app/Services/UserServices/user-service.service';
 
 
@@ -14,7 +15,7 @@ export class LoginComponentComponent implements OnInit {
   token:any;
   email:any;
   password:any;
-  constructor(private user: UserServiceService) {this.token=localStorage.getItem("token"); }
+  constructor(private user: UserServiceService,private rout: Router) {this.token=localStorage.getItem("token"); }
 
   ngOnInit(): void {
   }
@@ -26,8 +27,9 @@ export class LoginComponentComponent implements OnInit {
     }
     this.user.login(reqdata).subscribe((response:any)=>{
       console.log(response);
-      localStorage.setItem("token",response.data);
+      localStorage.setItem("token",response.data.token);
     })
+    this.rout.navigateByUrl('/dashbord')
 }
 
 }

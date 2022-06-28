@@ -1,0 +1,37 @@
+.toolbar{
+    background-color: #A03037;
+    height:70px;
+    width: 100%;
+}
+.toolBut{
+    width:100px;height:70px ;line-height: 70px;background-color: #A03037;
+}
+.icon{
+    color: aliceblue;
+    width: 50px;
+}
+
+.in{
+    font-size:large;padding-left: -80px;height: 38px;border: none;resize: none;
+    outline: none; 
+     background-color: white;border-radius:0px 10px 10px 0px;width: 600px;
+}
+
+.maticon{
+    color:rgb(61, 58, 58);height: 38px;border: none;line-height: 38px;
+    border-radius:5px 0px 0px 5px; background-color: white; align-items: center;
+    padding-left: -30px;
+}
+.footer{
+    
+    background-color: #1a0c0d;
+   position: fixed;
+    width: 1650px;
+    color:white;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 170px;
+}
+
+

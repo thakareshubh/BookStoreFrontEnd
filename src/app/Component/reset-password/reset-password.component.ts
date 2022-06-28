@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserServiceService } from 'src/app/Services/UserServices/user-service.service';
 
 @Component({
@@ -10,9 +11,10 @@ export class ResetPasswordComponent implements OnInit {
   password:any;
   confirmPassword:any;
   token:any
-  constructor(private user:UserServiceService) {this.token=localStorage.getItem("token"); }
+  constructor(private user:UserServiceService,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.token = this.activatedRoute.snapshot.paramMap.get('token')
   }
 
   onsubmit(){
@@ -23,6 +25,7 @@ export class ResetPasswordComponent implements OnInit {
     this.user.resetPassword(reqdata, this.token).subscribe(
       (response: any) => {
         console.log(response);
+        
       },
       (error) => {
         console.log(error);
