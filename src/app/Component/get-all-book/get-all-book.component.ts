@@ -9,9 +9,9 @@ import { BookServicesService } from 'src/app/Services/book-services.service';
 })
 export class GetAllBookComponent implements OnInit {
   booksArray: any = [];
-  bookQuantity : any;
+ 
   Book:any;
-  orderQuantity=1;
+  
   constructor(private router: Router,private bookService: BookServicesService) { }
 
   ngOnInit(): void {

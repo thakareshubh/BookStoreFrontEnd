@@ -97,13 +97,19 @@
 .price-container{
     margin-top: 25px;
 }
-.rate:not(:checked)>input {
-    position: absolute;
-    top: -9999px;
-}
 
+.rating {
+    background: rgba(0, 100, 0, 0.87);
+    height: 20px;
+    width: 46px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 3%;
+    margin-left: 19%;
+    text-align: -webkit-center;
+}
 .rate:not(:checked)>label {
-    float: right;
+    float: left;
     width: 1em;
     margin-bottom: 14px;
     overflow: hidden;
@@ -112,15 +118,14 @@
     font-size: 22px;
     color: #ccc;
 }
-
-.rate:not(:checked)>label:before {
+.rate:not(:checked)>label::after {
     content: '★ ';
     font-size: 28px;
+    animation-direction: alternate;
 }
-
 .rate>input:checked~label {
     color: #ffc700;
 }
-.rate {
-    margin-right: 88%;
+.rate:not(:checked)>input {
+    display: none;
 }
