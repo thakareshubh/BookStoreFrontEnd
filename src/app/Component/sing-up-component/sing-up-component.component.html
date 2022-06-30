@@ -10,9 +10,10 @@
 
             </div>
 
-            
 
-                <mat-card class="example-card2" >
+
+            <mat-card class="example-card2">
+                <div>
 
                     <div fxLayout="row">
                         <button class="button" style="margin-left: 40px;" routerLink="/login">
@@ -23,50 +24,50 @@
                     <div style="padding-left: 45px; margin-top: 10px;">
                         <span>Full Name</span>
                         <p style="margin-top: 10px;">
-                            
-                                <input [(ngModel)]="fullName" >
-                          
+
+                            <input [(ngModel)]="fullName">
+
                         </p>
                     </div>
                     <div style="padding-left: 45px; margin-top: 15px;">
                         <span>Email Id</span>
                         <p style="margin-top: 10px;">
-                            
-                               
-                                <input [(ngModel)]="email" >
+
+
+                            <input [(ngModel)]="email">
 
                         </p>
                     </div>
                     <div style="padding-left: 45px; margin-top: 15px;">
                         <span>Password</span>
                         <p style="margin-top: 10px;">
-                           
-                               
-                                <input [(ngModel)]="password" >
 
-                           
+
+                            <input [(ngModel)]="password">
+
+
                         </p>
 
                     </div>
                     <div style="padding-left: 45px; margin-top: 15px;">
                         <span>Moblie Number</span>
                         <p style="margin-top: 10px;">
-                           
-                               
-                                <input  [(ngModel)]="mobile" >
 
 
-                          
+                            <input [(ngModel)]="mobile">
+
+
+
                         </p>
                     </div>
                     <div style=" margin-top: -20px;">
-                        <button class="bott" (click)="onSubmit()" >SingUp</button>
+                        <button class="bott" (click)="onSubmit()">SingUp</button>
                     </div>
 
 
+                </div>
+            </mat-card>
 
-                </mat-card>
-            
         </div>
 
     </div>

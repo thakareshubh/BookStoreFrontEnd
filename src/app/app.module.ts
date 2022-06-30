@@ -24,6 +24,9 @@ import { ResetPasswordComponent } from './Component/reset-password/reset-passwor
 import { DashBordComponent } from './Component/dash-bord/dash-bord.component';
 import { GetAllBookComponent } from './Component/get-all-book/get-all-book.component';
 import { QuickViewComponent } from './Component/quick-view/quick-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MyCartComponent } from './Component/my-cart/my-cart.component';
+
 
 
 
@@ -40,6 +43,8 @@ import { QuickViewComponent } from './Component/quick-view/quick-view.component'
     DashBordComponent,
     GetAllBookComponent,
     QuickViewComponent,
+    MyCartComponent,
+  
   
     
     
@@ -50,7 +55,7 @@ import { QuickViewComponent } from './Component/quick-view/quick-view.component'
     BrowserModule,
     AppRoutingModule,MatIconModule,MatSelectModule,MatMenuModule,
     BrowserAnimationsModule,FlexLayoutModule ,FormsModule, ReactiveFormsModule ,MatFormFieldModule,
-    MatCardModule,HttpClientModule,MatToolbarModule,MatRadioModule,MatInputModule,
+    MatCardModule,HttpClientModule,MatToolbarModule,MatRadioModule,MatInputModule, NgbModule,
     
   ],
   providers: [],

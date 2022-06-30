@@ -105,11 +105,17 @@
     color: white;
     margin-bottom: 10px;
     margin-top: 3%;
-    margin-left: 19%;
+  
     text-align: -webkit-center;
 }
+#count{
+    margin-top: 30px;
+}
+.rate{
+    width: 110px;
+}
 .rate:not(:checked)>label {
-    float: left;
+    float: right;
     width: 1em;
     margin-bottom: 14px;
     overflow: hidden;
@@ -129,3 +135,43 @@
 .rate:not(:checked)>input {
     display: none;
 }
+
+.user-comment{
+ font-size: 16px;
+}
+.user-feedback{
+    font-size: 16px;
+}
+
+.feedback-box {
+    margin: 5px;
+    border: 1px solid;
+    background: white;
+}
+.plusminus{
+    border: none;
+    background-color: white;
+    height: 10px;
+    
+    font-size: 20px;
+}
+.img5{
+    width: 30px;
+    height: 30px;
+    margin-top: -32px;
+
+}
+.wrapper{
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+}
+.num{
+    width: 60px;
+    height: 20px;
+    
+    text-align: center;
+    
+    outline:none;
+}
+

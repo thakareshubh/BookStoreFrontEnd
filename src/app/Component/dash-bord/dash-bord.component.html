@@ -1,7 +1,7 @@
 <div fxLayout="column" fxFlex style="height: 100%;width: 100%;">
     <div fxFlex style="width: 100%;" class="toolbar" fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
 
-        <div class="navContainer" fxLayout="row" style="padding-left: 100px;width: 300px;" fxFlex>
+        <div class="navContainer" fxLayout="row" style="padding-left: 200px;width: 300px;" fxFlex>
             <img src="./../../../assets/navBook.png" alt="">
             <span style="color: White;font-size:large; margin-left: 5px;" routerLink="./getAllBook">BookStore</span>
         </div>
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div style="padding-right:200px;background-color: #A03037; " fxLayout="row">
+        <div style="padding-right:245px;background-color: #A03037; " fxLayout="row">
             <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
                 aria-label="Example icon-button with heart icon">
                 <div style="margin-left: 5px;height: 12px;">
@@ -25,10 +25,10 @@
                 <span style="color: aliceblue;">Profile</span>
             </button>
             <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
-                aria-label="Example icon-button with share icon">
+                aria-label="Example icon-button with share icon" routerLink="./cart">
 
-                <div style="margin-left: 5px;height: 12px;">
-                    <mat-icon class="icon">shopping_cart</mat-icon>
+                <div style="margin-left: 5px;height: 12px;" >
+                    <mat-icon   class="icon" routerLink="./cart">shopping_cart</mat-icon>
                 </div>
                 <span style="color: aliceblue;padding-left: 3px;">Cart</span>
             </button>

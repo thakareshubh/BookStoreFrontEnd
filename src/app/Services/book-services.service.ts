@@ -44,4 +44,45 @@ export class BookServicesService {
     
   }
 
+  addFeadback(data: any) {
+    console.log(data);
+    this.token=localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    return this.httpService.postservices('FeadBack/AddFeedback', data,true, header);
+  }
+
+  getfeedBack(reqdata: any) {
+    console.log(reqdata);
+    this.token=localStorage.getItem("token")
+
+    let header = {
+      headers: new HttpHeaders({
+        
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+        
+      }),
+      
+    };
+    console.log(reqdata);
+    return this.httpService.getService( `FeadBack/GetRecordsByBookId/${reqdata}`, true,header );
+    
+  }
+
+  addToBag(data: any) {
+    console.log(data);
+    this.token=localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    return this.httpService.postservices('cart/AddCart', data,true, header);
+  }
 }

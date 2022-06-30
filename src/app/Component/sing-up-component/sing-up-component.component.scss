@@ -20,21 +20,22 @@ mat-form-field.mat-form-field {
     margin-left: 30px;
     padding-top: 40px;
     margin-bottom: 30px;
-    height: 240px;
+    margin-bottom: 320px;
+    height: 270px;
     width: 240px;
-    border-radius: 130px;
+    border-radius: 100%;
 
 }
 .example-card{
-    margin-top: 40px;
+    margin-top: 50px;
     width: 600px;
     height: 350px;
     border:2px solid seashell;
     border-radius: 20px;
 }
 .example-card2{
-    width: 350px;
-    height: 420px;
+    width: 390px;
+    height: 460px;
     margin-left: -300px;
     border:2px solid seashell;
     border-radius: 5px ;
@@ -47,7 +48,7 @@ mat-form-field.mat-form-field {
     background: none;
 }
 input{
-    width: 260px;height: 30px;margin-top: -30px;
+    width: 260px;height: 40px;margin-top: -30px;
     border-radius: 3px;
 }
 
@@ -59,7 +60,7 @@ p{
     margin-bottom: -20px;
 }
 .bott{
-    width: 270px;height: 40px;margin-top: 29px; color: white;border-radius: 3px;
+    width: 260px;height: 40px;margin-top: 29px; color: white;border-radius: 3px;
     font-size: 20px; background-color: rgb(145, 24, 24);margin-left: 45px;
 }
 .bottomButt{

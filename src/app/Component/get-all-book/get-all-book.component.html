@@ -1,9 +1,9 @@
-<div style="width: 100%; padding-left: 100px;padding-right:210px;margin-bottom: 30px; " fxLayout="column">
-    <div fxLayout="row" fxLayoutAlign="space-between center">
+<div style="width: 100%; padding-left: 200px;padding-right:210px;margin-bottom: 30px; " fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center" style="margin-right:30px">
         <div>
             <span class="books">Books <p id="book-count">({{booksArray?.length}} items)</p></span>
         </div>
-        <div>
+        <div >
             <mat-form-field appearance="outline">
                 <mat-label>Sort by relevance</mat-label>
                 <mat-select class="matselect">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div fxLayout="row"  fxLayoutGap="27px" fxLayout="row wrap" fxFlex >
-        <div *ngFor="let Book of booksArray" style="margin-bottom: 30px;width: 270px;" fxLayout="row"
+        <div *ngFor="let Book of booksArray" style="margin-bottom: 30px;width: 250px;" fxLayout="row"
             fxLayout="row wrap"  >
             <mat-card style="margin-bottom: 40px;" >
                 <div class="maindiv">

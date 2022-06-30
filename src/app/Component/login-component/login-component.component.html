@@ -10,27 +10,27 @@
 
             </div>
 
-            
 
-                <mat-card class="example-card2">
 
-                    <div fxLayout="row">
+            <mat-card class="example-card2">
+                <div style="width: 360px;">
+                    <div fxLayout="row" fxLayoutAlign="space-between">
                         <button class="button" style="margin-left: 40px;font-weight: bolder;">
                             LOGIN
                         </button>
-                        <button class="button" style="margin-left: 72px" routerLink="/singUp">SINGUP</button>
+                        <button class="button" style="margin-right: 50px;" routerLink="/singUp">SINGUP</button>
                     </div><br>
                     <div style="padding-left: 45px; margin-top: 10px;">
                         <span style="margin-bottom: 20px;">Email Id</span>
-                        <p style="margin-top: 20px;">   
-                                <input [(ngModel)]="email" matInput>
+                        <p style="margin-top: 20px;">
+                            <input [(ngModel)]="email" matInput style="height: 40px;">
                         </p>
                     </div>
                     <div style="padding-left: 45px; margin-top: 10px;">
                         <span>Password</span>
-                  
-                            <input style="margin-top: 10px;" [(ngModel)]="password" matInput >
-                           
+
+                        <input style="margin-top: 10px;height: 40px;" [(ngModel)]="password" matInput >
+
                         <span style="margin-left: 150px;" routerLink="/forget">Forgot Password</span>
                     </div>
                     <div style="margin-bottom: 30px;">
@@ -43,12 +43,12 @@
                         <button
                             style="background-color: rgb(230, 225, 225);width:110px;margin-left: 40px;font-size: 15px;height: 35px;border-radius: 3px;">Google</button>
                     </div>
+                </div>
+
+            </mat-card>
 
 
-                </mat-card>
 
-
-            
         </div>
     </div>
 </div>

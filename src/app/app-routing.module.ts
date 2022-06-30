@@ -1,3 +1,4 @@
+import { MyCartComponent } from './Component/my-cart/my-cart.component';
 import { GetAllBookComponent } from './Component/get-all-book/get-all-book.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,7 @@ import { SingUpComponentComponent } from './Component/sing-up-component/sing-up-
 import { QuickViewComponent } from './Component/quick-view/quick-view.component';
 
 
+
 const routes: Routes = [
 
   {path:'login',component:LoginComponentComponent},
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path:'dashbord',component:DashBordComponent,
     children:
             [{path:'getAllBook',component:GetAllBookComponent},
+            {path:'cart',component:MyCartComponent},
             {path:'quickView',component:QuickViewComponent},
+           
               ]
 
           
