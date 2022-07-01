@@ -17,9 +17,10 @@ export class QuickViewComponent implements OnInit {
   orderQuantity = 1;
   show:any;
   bookQuantity:any;
-
+  cartArray:any;
   name = 'Angular ' + VERSION.major;
   value = 0;
+  values=1;
   
   constructor(
     private bookService: BookServicesService,
@@ -89,10 +90,18 @@ export class QuickViewComponent implements OnInit {
       }
     );
   }
-  quickview(Book:any){  
-    localStorage.setItem('bookQuantity', this.bookQuantity); 
-    this.router.navigateByUrl('dashbord/quickView')
-  }
+
+  // getAllcart() {
+    
+  //   this.bookService.getAllCart().subscribe((response: any) => {
+  //     console.log(response);
+  //     this.cartArray = response.response; 
+  //     console.log(this.cartArray);
+     
+  //   });
+  // }
+
+  
   handleMinus() {
     this.value--;  
   }

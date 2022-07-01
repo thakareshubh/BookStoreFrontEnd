@@ -3,7 +3,7 @@
 
         <div style="margin-bottom: 40px;">
             <span style="color:gray; cursor: pointer;" routerLink="/dashbord/getAllBook">Home/</span><span>
-                Cart({{cartArray?.lenght}})
+                Cart({{cartArray?.length}})
             </span>
         </div>
         <mat-card style="max-width: 1000px;" >
@@ -43,7 +43,7 @@
                                         alt=""></button>
                             </div>
                             <div>
-                                <button class="remove">Remove</button>
+                                <button class="remove" (click)="removecart(cart.cartId)">Remove</button>
                             </div>
                         </div>
                     </div>

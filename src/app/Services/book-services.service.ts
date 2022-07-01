@@ -100,4 +100,23 @@ export class BookServicesService {
     return this.httpService.getService(`cart/GetAllCartBook`,true,header)
     
   }
+
+  deletcart(reqdata: any) {
+    console.log(reqdata);
+    
+
+    let header = {
+      headers: new HttpHeaders({
+        
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+
+      }),
+      
+    };
+    console.log("ganya",reqdata)
+   
+    return this.httpService.deleteService( `cart/DeleteBook/${reqdata.cartId}`,  true,header );
+    
+  }
 }

@@ -11,6 +11,7 @@ export class MyCartComponent implements OnInit {
 
   cartArray:any;
   booksArray:any;
+  
   constructor(  private bookService: BookServicesService,
     private router: Router) { }
 
@@ -29,4 +30,19 @@ export class MyCartComponent implements OnInit {
      
     });
   }
-}
+
+  removecart(cartId:any){
+    let reqdata={
+      cartId:cartId
+    }
+    this.bookService.deletcart(reqdata).subscribe((response: any) => {
+      console.log(response);
+     this.getAllcart()
+     
+    });
+  }
+
+ 
+
+  }
+
