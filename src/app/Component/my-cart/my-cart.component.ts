@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BookServicesService } from 'src/app/Services/book-services.service';
 
 @Component({
   selector: 'app-my-cart',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCartComponent implements OnInit {
 
-  constructor() { }
+  cartArray:any;
+  booksArray:any;
+  constructor(  private bookService: BookServicesService,
+    private router: Router) { }
 
   ngOnInit(): void {
+   
+   this.getAllcart()
   }
 
+ 
+  getAllcart() {
+    
+    this.bookService.getAllCart().subscribe((response: any) => {
+      console.log(response);
+      this.cartArray = response.response; 
+      console.log(this.cartArray);
+     
+    });
+  }
 }

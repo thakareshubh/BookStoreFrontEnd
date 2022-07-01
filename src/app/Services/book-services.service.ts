@@ -85,4 +85,19 @@ export class BookServicesService {
     };
     return this.httpService.postservices('cart/AddCart', data,true, header);
   }
+
+  getAllCart() {
+
+    this.token = localStorage.getItem('token');
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':  'Bearer ' + this.token		
+      })
+
+    }
+    
+    return this.httpService.getService(`cart/GetAllCartBook`,true,header)
+    
+  }
 }

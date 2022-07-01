@@ -1,7 +1,13 @@
 <div>
-    <div style="width: 100%; padding-left: 200px;padding-right:240px;margin-bottom: 30px; ">
-        <mat-card style="width: 1000px;">
-            <div style="margin-left:30px;margin-right:30px;margin-top: 10px;">
+    <div style="width: 100%; padding-left: 200px;padding-right:240px;margin-bottom: 130px; " fxLayout="column">
+
+        <div style="margin-bottom: 40px;">
+            <span style="color:gray; cursor: pointer;" routerLink="/dashbord/getAllBook">Home/</span><span>
+                Cart({{cartArray?.lenght}})
+            </span>
+        </div>
+        <mat-card style="max-width: 1000px;" >
+            <div style="margin-left:30px;margin-right:30px;margin-top: 10px;"  >
                 <div fxLayout="row" fxLayoutAlign="space-between">
                     <div>
                         <span style="font-size: 25px;">Mat cart</span>
@@ -10,20 +16,20 @@
                         <span style="font-size: 25px;">Bridelab solution private ltd</span>
                     </div>
                 </div>
-                <div fxLayout="row" style="margin-top: 30px;">
-                    <div><img style="width:100px;" src="./../../../assets/Book1.png" alt=""></div>
+                <div fxLayout="row" style="margin-top: 30px;padding-bottom: 40px;border-bottom: 2px solid gray;" *ngFor="let cart of cartArray">
+                    <div><img style="width:100px;" [src]="cart.updateBookModel.bookImage" alt=""></div>
                     <div style="margin-left: 40px;margin-top: -10px;">
-                        <h2 class="title">bookName</h2>
-                        <p id="para">by authorName</p>
+                        <h2 class="title">{{cart.updateBookModel.bookName}}</h2>
+                        <p id="para">by {{cart.updateBookModel.authorName}} </p>
 
 
                         <div class="price-container" fxLayout="row">
 
                             <div class="dicounted-price">
-                                Rs..discountPrice
+                                Rs.{{cart.updateBookModel.discountPrice * cart.bookQuantity}}
                             </div>
                             <div class="actual-price">
-                                Rs.actualPrice
+                                Rs.{{cart.updateBookModel.actualPrice * cart.bookQuantity}}
                             </div>
                         </div>
                         <div class="wrapper" fxLayout="row" fxLayoutAlign="start center">
@@ -31,20 +37,76 @@
                                 <button class="plusminus"><img class="img5"
                                         src="./../../../assets/do_not_disturb_on_FILL0_wght400_GRAD0_opsz48.png"
                                         alt=""></button>
-                                <input class="num" />
+                                <input class="num"  [value]=" cart.bookQuantity"/>
                                 <button class="plusminus"><img class="img5"
                                         src="./../../../assets/add_circle_FILL0_wght400_GRAD0_opsz48.png"
                                         alt=""></button>
                             </div>
                             <div>
-                                <button class="remove" >Remove</button>
+                                <button class="remove">Remove</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div fxLayoutAlign="end">
-                    <button class="place" >PLACE ORDER</button>
+                <div fxLayoutAlign="end" style="margin-top:40px">
+                    <button class="place">PLACE ORDER</button>
                 </div>
+            </div>
+        </mat-card>
+        <mat-card style="width: 1000px;margin-top: 30px;">
+            <div>
+                <Address style="margin-top:15px">Address Details</Address>
+            </div>
+            <!-- <div style="margin: 20px;">
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <div><h3>Customer Details</h3></div>
+                    <div><button>Add New Address </button></div>
+                </div>
+                <div>
+                    
+                    <div fxLayout="row" fxLayoutGap="30px" style="margin-left: 25px;">
+                        <div fxLayout="column">
+                            <span>Full Name</span>
+                            <input style="height: 45px;width: 300px;padding-left: 10px;" >
+                        </div>
+                        <div fxLayout="column">
+                            <span>Mobile Number</span>
+                            <input style="height: 45px;width: 300px;padding-left: 10px;" >
+                        </div>
+                    </div>
+                    <div>
+                    <mat-radio-group aria-label="Select an option" fxLayout="column" style="height: 600px;">
+                        <mat-radio-button value="1" fxLayout="column">
+                            <div>
+                                <span>1.Work</span>
+                                <span>Edit</span>
+                            </div>
+                            <div>
+                                <address>Address</address>
+                                <textarea name="" id="" cols="90" rows="5"></textarea>
+
+                            </div>
+                            <div>
+                                <div fxLayout="column">
+                                    <span>city town</span>
+                                    <input style="height: 45px;width: 300px;padding-left: 10px;" >
+                                </div>
+                                <div fxLayout="column">
+                                    <span>state</span>
+                                    <input style="height: 45px;width: 300px;padding-left: 10px;" >
+                                </div>
+                            </div>
+                        </mat-radio-button>
+                        <mat-radio-button value="2">Option 2</mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                </div>
+            </div> -->
+
+        </mat-card>
+        <mat-card style="width: 1000px;margin-top: 30px;">
+            <div>
+                <Address style="margin-top:15px">Order Summary</Address>
             </div>
         </mat-card>
     </div>

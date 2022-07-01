@@ -22,12 +22,15 @@
     
 }
 .place{
-    background-color: rgb(73, 73, 248);color: white;
+    background-color:#3371B5;color: white;
     border-radius: 3px;
     width: 140px;
     height: 35px;
     margin-bottom: 20px;
 }
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
 .num{
     width: 60px;
     height: 20px;
