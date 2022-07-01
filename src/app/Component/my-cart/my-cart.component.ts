@@ -42,7 +42,35 @@ export class MyCartComponent implements OnInit {
     });
   }
 
- 
+  updateToLess(cartId:any,bookQuantity:any,bookId:any){
+    let data={
+      
+      bookQuantity:(bookQuantity-1),
+      bookId:bookId,
+
+    } 
+    if(bookQuantity !=1 && bookQuantity !=0  ){
+    this.bookService.updateToLess(cartId,data).subscribe((response: any) => {
+      console.log(response);
+     this.getAllcart()
+     
+    });}
 
   }
 
+  updateToAdd(cartId:any,bookQuantity:any,bookId:any){
+    let data={
+      
+      bookQuantity:(bookQuantity+1),
+      bookId:bookId,
+
+    } 
+    console.log("add")
+    if(bookQuantity>=0){
+    this.bookService.updateToLess(cartId,data).subscribe((response: any) => {
+      console.log(response);
+     this.getAllcart()
+     
+    });}
+}
+}

@@ -26,6 +26,8 @@ import { GetAllBookComponent } from './Component/get-all-book/get-all-book.compo
 import { QuickViewComponent } from './Component/quick-view/quick-view.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyCartComponent } from './Component/my-cart/my-cart.component';
+import { OrderListComponent } from './Component/order-list/order-list.component';
+import { WishListComponent } from './Component/wish-list/wish-list.component';
 
 
 
@@ -45,6 +47,8 @@ import { MyCartComponent } from './Component/my-cart/my-cart.component';
     GetAllBookComponent,
     QuickViewComponent,
     MyCartComponent,
+    OrderListComponent,
+    WishListComponent,
   
   
     

@@ -56,6 +56,8 @@ export class BookServicesService {
     return this.httpService.postservices('FeadBack/AddFeedback', data,true, header);
   }
 
+
+
   getfeedBack(reqdata: any) {
     console.log(reqdata);
     this.token=localStorage.getItem("token")
@@ -84,6 +86,18 @@ export class BookServicesService {
       }),
     };
     return this.httpService.postservices('cart/AddCart', data,true, header);
+  }
+
+  updateToLess(cartId:any,data: any) {
+    console.log(data,cartId);
+    this.token=localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    return this.httpService.putservices(`cart/updateCart/${cartId}`, data,true, header);
   }
 
   getAllCart() {
@@ -118,5 +132,31 @@ export class BookServicesService {
    
     return this.httpService.deleteService( `cart/DeleteBook/${reqdata.cartId}`,  true,header );
     
+  }
+
+  addwishlist(data: any) {
+    console.log(data);
+    this.token=localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    return this.httpService.postservices('WishList/AddWishList', data,true, header);
+  }
+
+  removewishlist(reqdata: any) {
+    console.log(reqdata);
+    let header = {
+      headers: new HttpHeaders({
+
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+      
+    };
+    console.log("ganya",reqdata)
+    return this.httpService.deleteService( `WishList/RemoveWishList?wishListId=${reqdata.wishListId}`,  true,header );
   }
 }

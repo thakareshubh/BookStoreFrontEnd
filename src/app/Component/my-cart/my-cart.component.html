@@ -34,11 +34,11 @@
                         </div>
                         <div class="wrapper" fxLayout="row" fxLayoutAlign="start center">
                             <div fxLayout="row" fxLayoutAlign="start center">
-                                <button class="plusminus"><img class="img5"
+                                <button class="plusminus" (click)="updateToLess(cart.cartId,cart.bookQuantity,cart.bookId)" ><img class="img5"
                                         src="./../../../assets/do_not_disturb_on_FILL0_wght400_GRAD0_opsz48.png"
                                         alt=""></button>
                                 <input class="num"  [value]=" cart.bookQuantity"/>
-                                <button class="plusminus"><img class="img5"
+                                <button class="plusminus" (click)="updateToAdd(cart.cartId,cart.bookQuantity,cart.bookId)"><img class="img5"
                                         src="./../../../assets/add_circle_FILL0_wght400_GRAD0_opsz48.png"
                                         alt=""></button>
                             </div>

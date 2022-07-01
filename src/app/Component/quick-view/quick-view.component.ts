@@ -17,7 +17,7 @@ export class QuickViewComponent implements OnInit {
   orderQuantity = 1;
   show:any;
   bookQuantity:any;
-  cartArray:any;
+
   name = 'Angular ' + VERSION.major;
   value = 0;
   values=1;
@@ -90,16 +90,23 @@ export class QuickViewComponent implements OnInit {
       }
     );
   }
-
-  // getAllcart() {
-    
-  //   this.bookService.getAllCart().subscribe((response: any) => {
-  //     console.log(response);
-  //     this.cartArray = response.response; 
-  //     console.log(this.cartArray);
+  addToWishList() {
+    let data = {
+      bookId: this.BookId,
      
-  //   });
-  // }
+    }
+    this.bookService.addwishlist(data).subscribe(
+      (response: any) => {
+        console.log('Add to wishlist', response);
+        
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+  }
+
+  
 
   
   handleMinus() {

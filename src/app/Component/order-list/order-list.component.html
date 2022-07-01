@@ -1,0 +1,36 @@
+<div>
+    <div style="width: 100%; padding-left: 200px;padding-right:240px;margin-bottom: 130px; " fxLayout="column">
+
+        <div style="margin-bottom: 40px;">
+            <span style="color:gray; cursor: pointer;" routerLink="/dashbord/getAllBook">Home/</span><span>
+                Order()
+            </span>
+        </div>
+        <mat-card style="max-width: 1000px;padding: 60px;border: 2px solid gray;" fxLayout="row" fxLayoutAlign="space-between" >
+            <div   >
+               
+                <div fxLayout="row"  >
+                    <div><img style="width:100px;" src="./../../../assets/Book1.png" alt=""></div>
+                    <div style="margin-left: 40px;margin-top: 5px;">
+                        <h2 class="title">bookName</h2>
+                        <p id="para">by authorName </p>
+
+
+                        <div class="price-container" fxLayout="row">
+
+                            <div class="dicounted-price">
+                                Rs.discountPrice 
+                            </div>
+                            <div class="actual-price">
+                                Rs.actualPrice 
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                
+            </div>
+            <div><h2 style="font-size: 18px;color :black">Oder Date</h2></div>
+        </mat-card>
+    </div>
+</div>

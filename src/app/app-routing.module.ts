@@ -1,3 +1,5 @@
+import { WishListComponent } from './Component/wish-list/wish-list.component';
+import { OrderListComponent } from './Component/order-list/order-list.component';
 import { MyCartComponent } from './Component/my-cart/my-cart.component';
 import { GetAllBookComponent } from './Component/get-all-book/get-all-book.component';
 import { NgModule } from '@angular/core';
@@ -24,6 +26,8 @@ const routes: Routes = [
             [{path:'getAllBook',component:GetAllBookComponent},
             {path:'cart',component:MyCartComponent},
             {path:'quickView',component:QuickViewComponent},
+            {path:'order',component:OrderListComponent,},
+            {path:'wishlist',component:WishListComponent}
            
               ]
 

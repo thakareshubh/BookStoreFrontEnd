@@ -17,12 +17,26 @@
         </div>
 
         <div style="padding-right:245px;background-color: #A03037; " fxLayout="row">
-            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
+            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center"  mat-button [matMenuTriggerFor]="menu" 
                 aria-label="Example icon-button with heart icon">
                 <div style="margin-left: 5px;height: 12px;">
                     <mat-icon class="icon">perm_identity</mat-icon>
                 </div>
                 <span style="color: aliceblue;">Profile</span>
+                <mat-menu class="matmenu" #menu="matMenu">
+                    <div fxLayout="column" fxLayoutGap="3px" style="width: 200px;">
+                      <h3 class="welcome">Hello Shubham,</h3>
+                    </div>
+                  
+                    
+                    <button class="wishlistbutton" mat-menu-item  fxLayoutAlign.sm="end center" >
+                      <mat-icon class="wishlistIcon">favorite</mat-icon> My Wishlist
+                    </button>
+                       
+                    <div style="margin-top: 1px;" mat-menu-item fxLayoutGap="0px">
+                      <button (click)="Logout()" class="loginbutton">Logout</button>
+                    </div>
+                  </mat-menu>
             </button>
             <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
                 aria-label="Example icon-button with share icon" routerLink="./cart">
