@@ -8,7 +8,8 @@
 
 
         <div style="margin-bottom: 10px;margin-top: 10px;margin-right: 300px;" fxLayout.lt-md="200px">
-            <div style="background-color:aliceblue;height: 40px;width: 600px;padding-left: -300px;" fxLayout="row" fxLayout.lt-md="200px">
+            <div style="background-color:aliceblue;height: 40px;width: 600px;padding-left: -300px;" fxLayout="row"
+                fxLayout.lt-md="200px">
                 <mat-icon class="maticon">search </mat-icon>
 
                 <input class="in" placeholder="Search" fxLayout.lt-md="170px">
@@ -17,40 +18,42 @@
         </div>
 
         <div style="padding-right:245px;background-color: #A03037; " fxLayout="row">
-            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center"  mat-button [matMenuTriggerFor]="menu" 
-                aria-label="Example icon-button with heart icon">
+            <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-button
+                [matMenuTriggerFor]="menu" aria-label="Example icon-button with heart icon">
                 <div style="margin-left: 5px;height: 12px;">
                     <mat-icon class="icon">perm_identity</mat-icon>
                 </div>
                 <span style="color: aliceblue;">Profile</span>
-                <mat-menu class="matmenu" #menu="matMenu">
-                    <div fxLayout="column" fxLayoutGap="3px" style="width: 200px;">
-                      <h3 class="welcome">Hello Shubham,</h3>
+                <mat-menu class="matmenu" #menu="matMenu" >
+                    <div  style="width: 200px;padding:20px">
+                        <div  >
+                            <h3 style="margin-left: 12px;">Hello Shubham</h3>
+                        </div>
+
+
+                        <button class="wishlistbutton" mat-menu-item fxLayoutAlign.sm="end center" routerLink="./wishlist" >
+                            <mat-icon class="wishlistIcon">favorite</mat-icon> My Wishlist
+                        </button>
+
+                        <div  style="width: 100px;height:30px" >
+                            <button class="log" (click)="Logout()" >Logout</button>
+                        </div>
                     </div>
-                  
-                    
-                    <button class="wishlistbutton" mat-menu-item  fxLayoutAlign.sm="end center" >
-                      <mat-icon class="wishlistIcon">favorite</mat-icon> My Wishlist
-                    </button>
-                       
-                    <div style="margin-top: 1px;" mat-menu-item fxLayoutGap="0px">
-                      <button (click)="Logout()" class="loginbutton">Logout</button>
-                    </div>
-                  </mat-menu>
+                </mat-menu>
             </button>
             <button class="toolBut" fxLayout="column" fxLayoutAlign="center center" mat-icon-button
                 aria-label="Example icon-button with share icon" routerLink="./cart">
 
-                <div style="margin-left: 5px;height: 12px;" >
-                    <mat-icon   class="icon" routerLink="./cart">shopping_cart</mat-icon>
+                <div style="margin-left: 5px;height: 12px;">
+                    <mat-icon class="icon" routerLink="./cart">shopping_cart</mat-icon>
                 </div>
                 <span style="color: aliceblue;padding-left: 3px;">Cart</span>
             </button>
         </div>
 
     </div>
-    <div style="margin-top: 30px;" >
-        <router-outlet ></router-outlet>
+    <div style="margin-top: 30px;">
+        <router-outlet></router-outlet>
     </div>
 
     <footer class="footer">

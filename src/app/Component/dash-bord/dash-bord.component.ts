@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BookServicesService } from 'src/app/Services/book-services.service';
 
 @Component({
   selector: 'app-dash-bord',
@@ -7,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dash-bord.component.scss']
 })
 export class DashBordComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  wishArray:any
+  constructor(private router: Router,private bookService: BookServicesService) { }
 
   ngOnInit(): void {
   }
@@ -17,4 +18,5 @@ export class DashBordComponent implements OnInit {
     localStorage.removeItem("token");
     this.router.navigateByUrl('/login');
   }
+  
 }

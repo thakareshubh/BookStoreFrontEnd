@@ -3,38 +3,39 @@
 
         <div style="margin-bottom: 40px;">
             <span style="color:gray; cursor: pointer;" routerLink="/dashbord/getAllBook">Home/</span><span>
-                My Wishlist
+                My Wishlist({{wishArray?.length}})
             </span>
         </div>
         <mat-card style="width: 1000px;border: 2px solid gray;" fxLayout="column" >
             <div style="margin-top: -18px;background-color:#F5F5F5;margin-left: -18px;margin-right: -28px;margin-bottom: 40px; height:50px;width:1000px;border: 1px solid gray;">
                 <h2 style="line-height:40px;padding-left:40px;">My Wishlist</h2>
             </div>
-            <div fxLayout="row" fxLayoutAlign="space-between" style="padding-left:30px;padding-bottom: 30px;padding-right:30px;" >
+            <div fxLayout="row" fxLayoutAlign="space-between" style=" margin-top: 30px; padding-left:30px;border-bottom: 2px solid gray;padding-bottom: 30px;padding-right:30px;"  *ngFor="let wish of wishArray">
                
                
                 <div fxLayout="row"  >
-                    <div><img style="width:100px;" src="./../../../assets/Book1.png" alt=""></div>
+                    <div><img style="width:100px;" [src]="wish.updateBookModel.bookImage" alt=""></div>
                     <div style="margin-left: 40px;margin-top: 5px;">
-                        <h2 class="title">bookName</h2>
-                        <p id="para">by authorName </p>
+                        <h2 class="title">{{wish.updateBookModel.bookName}}</h2>
+                        <p id="para">by {{wish.updateBookModel.authorName}} </p>
 
 
                         <div class="price-container" fxLayout="row">
 
                             <div class="dicounted-price">
-                                Rs.discountPrice 
+                                Rs.{{wish.updateBookModel.discountPrice}} 
                             </div>
                             <div class="actual-price">
-                                Rs.actualPrice 
+                                Rs.{{wish.updateBookModel.actualPrice}} 
                             </div>
                         </div>
                       
                     </div>
                 </div>
-                <div><mat-icon style="font-size: 25px;">delete</mat-icon></div>
+                <div style="margin-top: 15px;"><mat-icon style="font-size: 25px;" (click)=" removewishlist(wish.wishlistId)">delete</mat-icon></div>
+                
             </div>
-            <hr style="margin-left: -20px;margin-right: -20px;">
+           
         </mat-card>
     </div>
 </div>

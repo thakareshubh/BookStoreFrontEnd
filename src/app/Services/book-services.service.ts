@@ -159,4 +159,18 @@ export class BookServicesService {
     console.log("ganya",reqdata)
     return this.httpService.deleteService( `WishList/RemoveWishList?wishListId=${reqdata.wishListId}`,  true,header );
   }
+  getAllwishlist(){
+
+    this.token = localStorage.getItem('token');
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':  'Bearer ' + this.token		
+      })
+
+    }
+    
+    return this.httpService.getService(`WishList/GetWishlistDetailsByUserid`,true,header)
+    
+  }
 }
