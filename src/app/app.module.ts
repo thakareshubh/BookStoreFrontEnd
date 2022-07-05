@@ -28,6 +28,7 @@ import { OrderListComponent } from './Component/order-list/order-list.component'
 import { WishListComponent } from './Component/wish-list/wish-list.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { OrderSucceedComponent } from './Component/order-succeed/order-succeed.component';
 
 
 
@@ -45,6 +46,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MyCartComponent,
     OrderListComponent,
     WishListComponent,
+    OrderSucceedComponent,
   
 
   

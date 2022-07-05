@@ -75,11 +75,11 @@
                     <div fxLayout="row" fxLayoutGap="30px" style="margin-left: 25px;">
                         <div fxLayout="column">
                             <span>Full Name</span>
-                            <input style="height: 45px;width: 300px;padding-left: 10px;">
+                            <textarea style="max-height: 50px;width: 300px;padding-left: 10px;line-height: 50px;">Shubham Thakare</textarea>
                         </div>
                         <div fxLayout="column">
                             <span>Mobile Number</span>
-                            <input style="height: 45px;width: 300px;padding-left: 10px;">
+                            <textarea style="max-height: 50px;width: 300px;padding-left: 10px;line-height: 50px;">7028873490</textarea>
                         </div>
                     </div>
                     <div *ngIf="addshow">
@@ -109,33 +109,33 @@
                             </mat-radio-group>
                         </div>
                         <div fxLayoutAlign="end" style="margin-bottom: 20px;"><button
-                                style="height: 40px;font-size: 16px; width:200px;background-color: blue;color: white;">Add
+                                style="height: 40px;font-size: 16px; width:200px;background-color: blue;color: white;">Submit
                                 Addrress</button></div>
                     </div>
 
                     <div style="margin-top: 20px;margin-left: 25px" *ngIf="!addshow">
                         <div *ngFor="let Address of addresstArray">
-                            
+
                             <div *ngIf="Address.typeId===1">
-                                <input type="radio" [(ngModel)]="AddressId" [id]="Address.typeId"
-                                value="Address.typeId" style="margin-top: 20px;">
+                                <input type="radio" [(ngModel)]="AddressId" [id]="Address.typeId" value="Address.typeId"
+                                    style="margin-top: 20px;">
                                 <span for="Address.typeId" style="font-size: 18px;">.Home </span>
                             </div>
                             <div *ngIf="Address.typeId===2">
-                                <input type="radio" [(ngModel)]="AddressId" [id]="Address.typeId"
-                                value=".work" style="margin-top: 20px;">
+                                <input type="radio" [(ngModel)]="AddressId" [id]="Address.typeId" value=".work"
+                                    style="margin-top: 20px;">
                                 <span for="Address.typeId" style="font-size: 18px;">.Work </span>
                             </div>
                             <div *ngIf="Address.typeId > 2">
                                 <input type="radio" [(ngModel)]="AddressId" [id]="Address.typeId"
-                                [value]="Address.typeId" style="margin-top: 20px;">
+                                    [value]="Address.typeId" style="margin-top: 20px;">
                                 <span for="Address.typeId" style="font-size: 18px;">.other </span>
                             </div>
                             <div fxLayout="column" style="margin-top: 10px;">
                                 <span>Address</span>
                                 <input style="width: 630px;height: 100px;padding-left: 10px;" [value]="Address.address">
                             </div>
-                            
+
                             <div fxLayout="row" fxLayoutGap="30px" style="margin-top: 20px;">
                                 <div fxLayout="column">
                                     <span>city town</span>
@@ -160,22 +160,22 @@
         </mat-card>
         <mat-card style="width: 1000px;margin-top: 30px;">
             <div *ngIf="!order">
-                <Address style="margin-top:15px" >Order Summary</Address>
+                <Address style="margin-top:15px">Order Summary</Address>
             </div>
             <div *ngIf="order">
-                <div fxLayout="row"
-                fxLayoutAlign="space-between" *ngFor="let cart of cartArray" style="padding-bottom: 30px;margin-top:20px; border-bottom:1px solid gray">
-                    <div >
-    
+                <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let cart of cartArray"
+                    style="padding-bottom: 30px;margin-top:20px; border-bottom:1px solid gray">
+                    <div>
+
                         <div fxLayout="row">
                             <div><img style="width:100px;" [src]="cart.updateBookModel.bookImage" alt=""></div>
                             <div style="margin-left: 40px;margin-top: 5px;">
                                 <h2 class="title">{{cart.updateBookModel.bookName}}</h2>
                                 <p id="para">by {{cart.updateBookModel.authorName}} </p>
-    
-    
+
+
                                 <div class="price-container" fxLayout="row">
-    
+
                                     <div class="dicounted-price">
                                         Rs:{{cart.updateBookModel.actualPrice}}
                                     </div>
@@ -183,16 +183,16 @@
                                         Rs:{{cart.updateBookModel.discountPrice}}
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                     </div>
-                   
+                    <div fxLayoutAlign="end"><button (click)="addToOrder(cart.bookId,cart.bookQuantity)"
+                        style="height: 40px;margin-top:20px;font-size: 16px; width:200px;background-color: blue;color: white;">Checkout</button>
                 </div>
-                <div fxLayoutAlign="end"><button (click)="addToOrder()"
-                    style="height: 40px;margin-top:20px;font-size: 16px; width:200px;background-color: blue;color: white;">Checkout</button>
-            </div>
+                </div>
+               
             </div>
 
         </mat-card>

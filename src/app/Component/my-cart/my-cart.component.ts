@@ -99,12 +99,13 @@ export class MyCartComponent implements OnInit {
     }
   }
 
-  addToOrder() {
+  addToOrder(BookId:any,bookQuantity:any) {
     let data = {
-      bookId: this.cartArray.BookId,
+      bookId: BookId,
       addressId:this.AddressId,
-      bookQuantity:this.cartArray.bookQuantity,
+      bookQuantity:bookQuantity,
     }
+    console.log(data)
     this.bookService.addToOrder(data).subscribe(
       (response: any) => {
         console.log('Add to wishlist', response);

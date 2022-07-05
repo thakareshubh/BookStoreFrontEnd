@@ -1,3 +1,4 @@
+import { OrderSucceedComponent } from './Component/order-succeed/order-succeed.component';
 import { WishListComponent } from './Component/wish-list/wish-list.component';
 import { OrderListComponent } from './Component/order-list/order-list.component';
 import { MyCartComponent } from './Component/my-cart/my-cart.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
             {path:'cart',component:MyCartComponent},
             {path:'quickView',component:QuickViewComponent},
             {path:'order',component:OrderListComponent,},
-            {path:'wishlist',component:WishListComponent}
+            {path:'wishlist',component:WishListComponent},
+            {path:'ordersucceed',component:OrderSucceedComponent}
            
               ]
 
