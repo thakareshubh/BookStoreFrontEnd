@@ -15,6 +15,7 @@ export class MyCartComponent implements OnInit {
   AddressId:any;
   show=false;
   addshow=false;
+  order=false;
   
 
   constructor(
@@ -28,6 +29,11 @@ export class MyCartComponent implements OnInit {
     this.getAllcart();
     this.getAllAddres();
   }
+  ordershow(){
+    console.log("calling hide")
+    this.order=!this.order
+  }
+
   hideAndShow(){
     console.log("calling hide")
     this.show=!this.show
@@ -93,10 +99,11 @@ export class MyCartComponent implements OnInit {
     }
   }
 
-  addToOrder(BookId:any) {
+  addToOrder() {
     let data = {
-      bookId: BookId,
-     
+      bookId: this.cartArray.BookId,
+      addressId:this.AddressId,
+      bookQuantity:this.cartArray.bookQuantity,
     }
     this.bookService.addToOrder(data).subscribe(
       (response: any) => {
