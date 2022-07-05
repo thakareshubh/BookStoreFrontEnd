@@ -6,31 +6,36 @@
                 Order()
             </span>
         </div>
-        <mat-card style="max-width: 1000px;padding: 60px;border: 2px solid gray;" fxLayout="row" fxLayoutAlign="space-between" >
-            <div   >
-               
-                <div fxLayout="row"  >
-                    <div><img style="width:100px;" src="./../../../assets/Book1.png" alt=""></div>
-                    <div style="margin-left: 40px;margin-top: 5px;">
-                        <h2 class="title">bookName</h2>
-                        <p id="para">by authorName </p>
+        <mat-card style="max-width: 1000px;padding: 60px;border: 2px solid gray;"   *ngFor="let cart of orderArray">
+            <div fxLayout="row"
+            fxLayoutAlign="space-between">
+                <div>
+
+                    <div fxLayout="row">
+                        <div><img style="width:100px;" [src]="cart.bookImage" alt=""></div>
+                        <div style="margin-left: 40px;margin-top: 5px;">
+                            <h2 class="title">{{cart.bookName}}</h2>
+                            <p id="para">by {{cart.authorName}} </p>
 
 
-                        <div class="price-container" fxLayout="row">
+                            <div class="price-container" fxLayout="row">
 
-                            <div class="dicounted-price">
-                                Rs.discountPrice 
+                                <div class="dicounted-price">
+                                    Total Book:{{cart.bookQuantity}}
+                                </div>
+                                <div class="actual-price">
+                                    Total price{{cart.totalPrice}}
+                                </div>
                             </div>
-                            <div class="actual-price">
-                                Rs.actualPrice 
-                            </div>
+
                         </div>
-                      
                     </div>
+
                 </div>
-                
+                <div>
+                    <h2 style="font-size: 18px;"><img  src="./../../../assets/grren.jpg" style="width: 20px;height:20px;border-radius: 100%;"> Placed order on {{cart.orderDate}}</h2>
+                </div>
             </div>
-            <div><h2 style="font-size: 18px;color :black">Oder Date</h2></div>
         </mat-card>
     </div>
 </div>

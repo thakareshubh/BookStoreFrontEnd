@@ -14,9 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select'
 import {MatMenuModule} from '@angular/material/menu'
-
-
-
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoginComponentComponent } from './Component/login-component/login-component.component';
 import { SingUpComponentComponent } from './Component/sing-up-component/sing-up-component.component';
 import { ForgetPasswordComponentComponent } from './Component/forget-password-component/forget-password-component.component';
@@ -28,10 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyCartComponent } from './Component/my-cart/my-cart.component';
 import { OrderListComponent } from './Component/order-list/order-list.component';
 import { WishListComponent } from './Component/wish-list/wish-list.component';
-
-
-
-
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -50,18 +46,15 @@ import { WishListComponent } from './Component/wish-list/wish-list.component';
     OrderListComponent,
     WishListComponent,
   
-  
-    
-    
-    
+
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,MatIconModule,MatSelectModule,MatMenuModule,
     BrowserAnimationsModule,FlexLayoutModule ,FormsModule, ReactiveFormsModule ,MatFormFieldModule,
-    MatCardModule,HttpClientModule,MatToolbarModule,MatRadioModule,MatInputModule, NgbModule,
-    
+    MatCardModule,HttpClientModule,MatToolbarModule,MatRadioModule,MatInputModule, NgbModule,MatSnackBarModule,
+    MatPaginatorModule,MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

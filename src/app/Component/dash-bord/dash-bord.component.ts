@@ -9,9 +9,11 @@ import { BookServicesService } from 'src/app/Services/book-services.service';
 })
 export class DashBordComponent implements OnInit {
   wishArray:any
+  cart:any;
   constructor(private router: Router,private bookService: BookServicesService) { }
 
   ngOnInit(): void {
+    this.cart = localStorage.getItem('cartId');
   }
   Logout()
   {

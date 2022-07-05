@@ -1,6 +1,7 @@
 import { Component, OnInit, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookServicesService } from 'src/app/Services/book-services.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-quick-view',
@@ -24,7 +25,7 @@ export class QuickViewComponent implements OnInit {
   
   constructor(
     private bookService: BookServicesService,
-    private router: Router
+    private router: Router,private sanv:MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -42,6 +43,9 @@ export class QuickViewComponent implements OnInit {
       this.booksArray = response.data;
       this.getFeedback();
       console.log(this.booksArray);
+      this.sanv.open('get book  Successfull', '', {
+        duration: 3000,
+      })
     });
   }
 
@@ -55,6 +59,9 @@ export class QuickViewComponent implements OnInit {
       (response: any) => {
         console.log('User Feedback', response);
         this.getFeedback();
+        this.sanv.open('add feedback  Successfull', '', {
+          duration: 3000,
+        })
       },
       (error: any) => {
         console.log(error);
@@ -70,6 +77,9 @@ export class QuickViewComponent implements OnInit {
       console.log('User Feedback', response);
       this.booksArr = response.response;
       console.log(this.booksArr);
+      this.sanv.open('get feedBack  Successfull', '', {
+        duration: 3000,
+      })
      
     });
   }
@@ -83,13 +93,19 @@ export class QuickViewComponent implements OnInit {
     this.bookService.addToBag(data).subscribe(
       (response: any) => {
         console.log('Add to cart', response);
-        
+         
+        this.sanv.open('add to cart  Successfull', '', {
+          duration: 3000,
+        })
       },
       (error: any) => {
         console.log(error);
       }
     );
+    localStorage.setItem('cartId',data.bookId);
   }
+ 
+
   addToWishList() {
     let data = {
       bookId: this.BookId,
@@ -98,6 +114,9 @@ export class QuickViewComponent implements OnInit {
     this.bookService.addwishlist(data).subscribe(
       (response: any) => {
         console.log('Add to wishlist', response);
+        this.sanv.open('add to wish list  Successfull', '', {
+          duration: 3000,
+        })
         
       },
       (error: any) => {
