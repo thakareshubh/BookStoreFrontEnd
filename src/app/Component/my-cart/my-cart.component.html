@@ -86,29 +86,29 @@
                         <div style="margin-top: 20px;margin-left: 25px">
                             <div>
                                 <h3 style="margin-bottom: -5px;">Address</h3>
-                                <textarea name="" id="" style="width: 630px;height: 100px; "></textarea>
+                                <textarea [(ngModel)]="address"  name="" id="" style="width: 630px;height: 100px; "></textarea>
                             </div>
 
                         </div>
                         <div fxLayout="row" fxLayoutGap="30px" style="margin-left: 25px;margin-top: 20px;">
                             <div fxLayout="column">
                                 <span>city town</span>
-                                <input style="height: 45px;width: 300px;padding-left: 10px;">
+                                <input [(ngModel)]="city" style="height: 45px;width: 300px;padding-left: 10px;">
                             </div>
                             <div fxLayout="column">
                                 <span>State</span>
-                                <input style="height: 45px;width: 300px;padding-left: 10px;">
+                                <input [(ngModel)]="state" style="height: 45px;width: 300px;padding-left: 10px;">
                             </div>
                         </div>
                         <div fxLayout="column" fxLayoutGap="7px" style="margin-left: 25px;margin-top: 20px;">
                             <span class="type">Type</span>
-                            <mat-radio-group aria-label="Select an option" class="radio">
-                                <mat-radio-button class="home1" value="1">home</mat-radio-button>
-                                <mat-radio-button class="work" value="2">work</mat-radio-button>
-                                <mat-radio-button class="other" value="3">other</mat-radio-button>
+                            <mat-radio-group aria-label="Select an option" [(ngModel)]="value" class="radio">
+                                <mat-radio-button [(ngModel)]="value" class="home1" value="1">home</mat-radio-button>
+                                <mat-radio-button [(ngModel)]="value" class="work" value="2">work</mat-radio-button>
+                                <mat-radio-button [(ngModel)]="value" class="other" value="3">other</mat-radio-button>
                             </mat-radio-group>
                         </div>
-                        <div fxLayoutAlign="end" style="margin-bottom: 20px;"><button
+                        <div  fxLayoutAlign="end" style="margin-bottom: 20px;float:right;"><button (click)="addAddress()"
                                 style="height: 40px;font-size: 16px; width:200px;background-color: blue;color: white;">Submit
                                 Addrress</button></div>
                     </div>
@@ -188,8 +188,8 @@
                         </div>
 
                     </div>
-                    <div fxLayoutAlign="end"><button (click)="addToOrder(cart.bookId,cart.bookQuantity)"
-                        style="height: 40px;margin-top:20px;font-size: 16px; width:200px;background-color: blue;color: white;">Checkout</button>
+                    <div fxLayoutAlign="end"  ><button (click)="addToOrder(cart.bookId,cart.bookQuantity)"
+                        style="height: 40px;margin-top:20px;font-size: 16px; width:200px;background-color: blue;color: white;" routerLink="/dashbord/orderSucceed">Checkout</button>
                 </div>
                 </div>
                

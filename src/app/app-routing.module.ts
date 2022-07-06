@@ -25,11 +25,11 @@ const routes: Routes = [
   {path:'dashbord',component:DashBordComponent,
     children:
             [{path:'getAllBook',component:GetAllBookComponent},
-            {path:'cart',component:MyCartComponent},
+            {path:'cart',component:MyCartComponent,},
             {path:'quickView',component:QuickViewComponent},
             {path:'order',component:OrderListComponent,},
             {path:'wishlist',component:WishListComponent},
-            {path:'ordersucceed',component:OrderSucceedComponent}
+            {path:'orderSucceed',component:OrderSucceedComponent}
            
               ]
 

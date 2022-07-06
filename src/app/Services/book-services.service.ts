@@ -212,7 +212,19 @@ export class BookServicesService {
 
     }
     
-    return this.httpService.getService(`GetAllAddresses`,true,header)
+    return this.httpService.getService(`Address/GetAllAddresses`,true,header)
     
+  }
+
+  adAddress(data: any) {
+    console.log(data);
+    this.token=localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    return this.httpService.postservices('Address/AddAddress', data,true, header);
   }
 }

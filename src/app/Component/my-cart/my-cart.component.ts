@@ -16,6 +16,7 @@ export class MyCartComponent implements OnInit {
   show=false;
   addshow=false;
   order=false;
+  address:any;city:any;state:any;value:any;
   
 
   constructor(
@@ -129,5 +130,28 @@ export class MyCartComponent implements OnInit {
         duration: 3000,
       });
     });
+  }
+
+  addAddress() {
+    let data = {
+      Address:this.address,
+      City:this.city,
+      State:this.state,
+      TypeId:this.value
+
+    }
+    console.log(data)
+    this.bookService.adAddress(data).subscribe(
+      (response: any) => {
+        console.log('Add to Address success', response);
+        this.sanv.open('your order is Successfull', '', {
+          duration: 3000,
+        })
+        
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
   }
 }
